@@ -14,15 +14,13 @@
         <h1>Blog Name</h1>
         <hr>
         <div class='posts'>
-            <div class='post'>
-                <h2 class='title'>Title 1</h2>
-                <p class='body'>This is a sample body.<br> Title1</p>
-            </div>
-            <hr>
-            <div class='post'>
-                <h2 class='title'>Title 2</h2>
-                <p class='body'>This is a sample body.<br> Title2</p>
-            </div>
+            @foreach($posts as $post)
+                <div class='post'>
+                    <h2 class='title1'>{{ $post->title }}</h2>
+                    <p class='body'>{{ $post->body }}</p>
+                </div>
+                <hr>
+            @endforeach
         </div>
     </body>
 </html>
